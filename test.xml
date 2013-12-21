@@ -1,0 +1,22 @@
+<suite>
+  <suiteName>Suite 2</suiteName>
+  <sauceURL>http://google.com</sauceURL>
+  <tests>
+    <test>
+      <enabled type="java.lang.Boolean">true</enabled>
+      <testname type="java.lang.String">Test 3</testname>
+      <environment type="java.lang.String">portal3</environment>
+      <testlocale type="java.lang.String">Grid</testlocale>
+      <browser type="java.lang.String">Firefox</browser>
+      <url type="java.lang.String">http://google.com</url>
+    </test>
+    <test>
+      <enabled type="java.lang.Boolean">true</enabled>
+      <testname type="java.lang.String">Test 4</testname>
+      <environment type="java.lang.String">portal4</environment>
+      <testlocale type="java.lang.String">Grid</testlocale>
+      <browser type="java.lang.String">Firefox</browser>
+      <url type="java.lang.String">http://etsy.com</url>
+    </test>
+  </tests>
+</suite>

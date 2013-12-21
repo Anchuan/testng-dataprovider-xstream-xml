@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite" verbose="1">
+<suite name="Suite" verbose="10">
 	<test name="TestSet">
 		<classes>
 			<class name="qa.dataprovider.ParametersTest" />

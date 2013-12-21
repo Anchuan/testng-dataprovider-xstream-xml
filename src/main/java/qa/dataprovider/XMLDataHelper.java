@@ -13,6 +13,10 @@ import com.thoughtworks.xstream.XStream;
 public class XMLDataHelper {
 
   private SuiteData testSuite;
+  
+  public XMLDataHelper() {
+	  System.out.println("XMLDataHelper object ready for you to call the createSuiteFile method...");
+  }
 
   public XMLDataHelper(String fileName) {
     File testXML = new File(fileName);
@@ -36,20 +40,20 @@ public class XMLDataHelper {
     }
   }
 
-  public void createDefaultSuiteFile(File testXML) {
+  public void createDefaultSuiteFile( File testXML ) {
     System.out.println("Calling createDefaultSuiteFile()...");
     SuiteData mySuite = new SuiteData("Suite 1",
         "http://username-string:access-key-string@ondemand.saucelabs.com:80/wd/hub");
 
     TestArguments tArgs1 = new TestArguments("true", "Test 1", "portal1", "Grid", "Firefox");
     tArgs1.setTestArgument("url", "java.lang.String", "http://google.com");
-    TestRow tCase1 = new TestRow(tArgs1);
-    mySuite.add(tCase1);
+    TestRow tCase1 = new TestRow( tArgs1 );
+    mySuite.add( tCase1 );
 
     TestArguments tArgs2 = new TestArguments("true", "Test 2", "portal2", "Local", "Chrome");
     tArgs2.setTestArgument("url", "java.lang.String", "http://yelp.com");
-    TestRow tCase2 = new TestRow(tArgs2);
-    mySuite.add(tCase2);
+    TestRow tCase2 = new TestRow( tArgs2 );
+    mySuite.add( tCase2 );
 
     XStream xstream = new XStream();
     xstream.autodetectAnnotations(true);
@@ -57,15 +61,35 @@ public class XMLDataHelper {
     System.out.println(xml);
     FileWriter fw;
     try {
-      fw = new FileWriter(testXML);
+      fw = new FileWriter( testXML );
       fw.append(xml);
       fw.close();
-    }
-    catch (IOException ioe) {
+    } catch ( IOException ioe ) {
       ioe.printStackTrace();
     }
     testSuite = mySuite;
   }
+  
+  public void createSuiteFile( File testXML, String suiteName, String suiteUrl, TestRow... args ) {
+	    System.out.println("Calling createDefaultSuiteFile()...");
+	    SuiteData mySuite = new SuiteData( suiteName, suiteUrl );
+	    for ( TestRow tr : args ) {
+	        mySuite.add( tr );
+	    }
+	    XStream xstream = new XStream();
+	    xstream.autodetectAnnotations(true);
+	    String xml = xstream.toXML(mySuite);
+	    System.out.println(xml);
+	    FileWriter fw;
+	    try {
+	      fw = new FileWriter( testXML );
+	      fw.append(xml);
+	      fw.close();
+	    } catch ( IOException ioe ) {
+	      ioe.printStackTrace();
+	    }
+	    testSuite = mySuite;
+	  }
 
   public String getBrowserByIndex(int idx) {
     return this.getTestArgsByIndex(idx).getBrowser();

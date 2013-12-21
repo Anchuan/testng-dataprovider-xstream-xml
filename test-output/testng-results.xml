@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="132" started-at="2013-12-21T04:43:56Z" finished-at="2013-12-21T04:43:56Z">
+  <suite name="Suite" duration-ms="146" started-at="2013-12-21T05:23:58Z" finished-at="2013-12-21T05:23:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="132" started-at="2013-12-21T04:43:56Z" finished-at="2013-12-21T04:43:56Z">
+    <test name="Default test" duration-ms="146" started-at="2013-12-21T05:23:58Z" finished-at="2013-12-21T05:23:58Z">
       <class name="qa.dataprovider.ParametersTest">
-        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@282b3223]" name="printHorizontal" duration-ms="10" started-at="2013-12-20T20:43:56Z" data-provider="testdata" finished-at="2013-12-20T20:43:56Z">
+        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@1d6e5ecb]" name="printHorizontal" duration-ms="9" started-at="2013-12-20T21:23:58Z" data-provider="testdata" finished-at="2013-12-20T21:23:58Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printHorizontal -->
-        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@282b3223]" name="printVertical" duration-ms="1" started-at="2013-12-20T20:43:56Z" data-provider="testdata" finished-at="2013-12-20T20:43:56Z">
+        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@1d6e5ecb]" name="printVertical" duration-ms="0" started-at="2013-12-20T21:23:58Z" data-provider="testdata" finished-at="2013-12-20T21:23:58Z">
           <params>
             <param index="0">
               <value>
@@ -29,6 +29,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printVertical -->
+        <test-method status="PASS" signature="testSuiteFile()[pri:0, instance:qa.dataprovider.ParametersTest@1d6e5ecb]" name="testSuiteFile" duration-ms="14" started-at="2013-12-20T21:23:58Z" finished-at="2013-12-20T21:23:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSuiteFile -->
       </class> <!-- qa.dataprovider.ParametersTest -->
     </test> <!-- Default test -->
   </suite> <!-- Suite -->
