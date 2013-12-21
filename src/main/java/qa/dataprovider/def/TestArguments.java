@@ -189,35 +189,41 @@ public class TestArguments {
 		System.out.println("Set '" + val.getKey() + "' value at index 4 to '" + val.getVal() + "' with type of '" + val.getType() + "'." );
 	}
 
-	public void addTestArgument( String propName, String type, String propVal ) {
-		System.out.println("Adding optional test property named '" + propName + "' with value of '" + propVal + "' and with type of '" + type + "'." );
+	public void setTestArgument( String propName, String type, String propVal ) {
+		
+		boolean addValue = true;
 		ArgObject val = new ArgObject( propName, type, propVal );
 		int count = 0;
 		for ( ArgObject x : argsWrapper ) {
 			if ( x.getKey().equalsIgnoreCase( propName ) ) {
-				throw new IllegalArgumentException("Failed to add test argument '" + x.getKey() + "'.  It already exists at index '" + count + "' with a value of '" + x.getVal() + "'." );
+				argsWrapper.set( count,  val );
+				addValue = false;
+				break;
 			}
 			count++;
 		}
 		// if no error, go ahead and add it at the end
-		argsWrapper.add( this.testSize(),  val );
+		if ( addValue ) argsWrapper.add( this.testSize(),  val );
+		System.out.println("Set test property named '" + propName + "' with value of '" + propVal + "' and with type of '" + type + 
+				 "' at index " + count + "." );
 		System.out.println("Test arguments size is now: " + this.testSize() );
 	}
 
 	public void setArgument( ArgObject argObject ) {
-		System.out.println("Adding optional test property named '" + argObject.getKey() + "' with value of '" + argObject.getVal() + "' and with type of '" + argObject.getType() + "'." );
 		boolean addValue = true;
 		int count = 0;
 		for ( ArgObject arg : argsWrapper ) {
 			if ( arg.getKey().equalsIgnoreCase( argObject.getKey() ) ) {
 				argsWrapper.set( count,  argObject );
 				addValue = false;
+				break;
 			}
 			count++;
 		}
 		if ( addValue ) argsWrapper.add( this.testSize(),  argObject );
-		System.out.println("Test '" + argsWrapper.get(1).getVal() + "' now has " + this.testSize() + " arguments." );
-		
+		System.out.println("Set test property named '" + argObject.getKey() + "' with value of '" + argObject.getVal() + "' and with type of '" + 
+		      argObject.getType() + "' at index " + count + "." );
+		System.out.println("Test '" + argsWrapper.get(1).getVal() + "' now has " + this.testSize() + " arguments." );		
 	}
 
 }

@@ -4,19 +4,15 @@
   <tests>
     <test>
       <enabled type="java.lang.Boolean">true</enabled>
-      <testname type="java.lang.String">Test 1</testname>
-      <environment type="java.lang.String">portal1</environment>
-      <testlocale type="java.lang.String">Grid</testlocale>
-      <browser type="java.lang.String">Firefox</browser>
-      <url type="java.lang.String">http://google.com</url>
-    </test>
-    <test>
-      <enabled type="java.lang.Boolean">true</enabled>
-      <testname type="java.lang.String">Test 2</testname>
-      <environment type="java.lang.String">portal2</environment>
+      <testname type="java.lang.String">Test 3</testname>
+      <environment type="java.lang.String">portal3</environment>
       <testlocale type="java.lang.String">Local</testlocale>
       <browser type="java.lang.String">Chrome</browser>
-      <url type="java.lang.String">http://yelp.com</url>
+      <url type="java.lang.String">http://microsoft.com</url>
+      <earth type="">e</earth>
+      <air type="">a</air>
+      <fire type="">f</fire>
+      <water type="">w</water>
     </test>
   </tests>
 </suite>

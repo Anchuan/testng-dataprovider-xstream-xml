@@ -1,50 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="137" started-at="2013-12-21T04:06:46Z" finished-at="2013-12-21T04:06:46Z">
+  <suite name="Suite" duration-ms="132" started-at="2013-12-21T04:43:56Z" finished-at="2013-12-21T04:43:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="137" started-at="2013-12-21T04:06:46Z" finished-at="2013-12-21T04:06:46Z">
+    <test name="Default test" duration-ms="132" started-at="2013-12-21T04:43:56Z" finished-at="2013-12-21T04:43:56Z">
       <class name="qa.dataprovider.ParametersTest">
-        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@2be8ac6f]" name="printHorizontal" duration-ms="10" started-at="2013-12-20T20:06:46Z" data-provider="testdata" finished-at="2013-12-20T20:06:46Z">
+        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@282b3223]" name="printHorizontal" duration-ms="10" started-at="2013-12-20T20:43:56Z" data-provider="testdata" finished-at="2013-12-20T20:43:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 1}, {environment, java.lang.String, portal1}, {testlocale, java.lang.String, Grid}, {browser, java.lang.String, Firefox}, {url, java.lang.String, http://google.com}]]]>
+                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 3}, {environment, java.lang.String, portal3}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://microsoft.com}, {earth, java.lang.String, e}, {air, java.lang.String, a}, {fire, java.lang.String, f}, {water, java.lang.String, w}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printHorizontal -->
-        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@2be8ac6f]" name="printHorizontal" duration-ms="0" started-at="2013-12-20T20:06:46Z" data-provider="testdata" finished-at="2013-12-20T20:06:46Z">
+        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@282b3223]" name="printVertical" duration-ms="1" started-at="2013-12-20T20:43:56Z" data-provider="testdata" finished-at="2013-12-20T20:43:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 2}, {environment, java.lang.String, portal2}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://yelp.com}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- printHorizontal -->
-        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@2be8ac6f]" name="printVertical" duration-ms="0" started-at="2013-12-20T20:06:46Z" data-provider="testdata" finished-at="2013-12-20T20:06:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 1}, {environment, java.lang.String, portal1}, {testlocale, java.lang.String, Grid}, {browser, java.lang.String, Firefox}, {url, java.lang.String, http://google.com}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- printVertical -->
-        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@2be8ac6f]" name="printVertical" duration-ms="1" started-at="2013-12-20T20:06:46Z" data-provider="testdata" finished-at="2013-12-20T20:06:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 2}, {environment, java.lang.String, portal2}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://yelp.com}]]]>
+                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 3}, {environment, java.lang.String, portal3}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://microsoft.com}, {earth, java.lang.String, e}, {air, java.lang.String, a}, {fire, java.lang.String, f}, {water, java.lang.String, w}]]]>
               </value>
             </param>
           </params>

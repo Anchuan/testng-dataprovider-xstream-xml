@@ -24,17 +24,13 @@ public class ArgConverter implements Converter {
 
 		@Override
 		public Object unmarshal( HierarchicalStreamReader reader, UnmarshallingContext context ) {
-			ArgObject ao = new ArgObject("null", "null", "null");
+			ArgObject ao = new ArgObject();
 			while ( reader.hasMoreChildren() ) {
 		        reader.moveDown();	        
 		        ao.setKey( reader.getNodeName() );
 		        ao.setVal( reader.getValue() );
-		        String typeval = reader.getAttribute("type");
-		        if ( typeval.isEmpty() ) {
-		        	ao.setType( "null" );
-		        } else {
-		          ao.setType( typeval );
-		        }
+		        String typeval = reader.getAttribute("type"); // assuming never null, xml must contain type argument
+                ao.setType( typeval );
 		        reader.moveUp();
 		    }
 			return ao;

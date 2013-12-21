@@ -20,6 +20,12 @@ public class ArgObject {
 		this.type = type;
 		this.val = val;
 	}
+	
+	public ArgObject() {
+		this.key = "";
+		this.type = "";
+		this.val = "";
+	}
 
 	public String toString() {
 		return getKey() + " [" + getType() + "]: " + getVal();
@@ -29,7 +35,7 @@ public class ArgObject {
 		return key;
 	}
 
-	public void setKey(String key) {
+	public void setKey( String key ) {
 		this.key = key;
 	}
 
@@ -37,7 +43,7 @@ public class ArgObject {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType( String type ) {
 		this.type = type;
 	}
 
@@ -45,7 +51,7 @@ public class ArgObject {
 		return val;
 	}
 
-	public void setVal(String val) {
+	public void setVal( String val ) {
 		this.val = val;
 	}
 	

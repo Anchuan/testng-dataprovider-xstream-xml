@@ -42,12 +42,12 @@ public class XMLDataHelper {
         "http://username-string:access-key-string@ondemand.saucelabs.com:80/wd/hub");
 
     TestArguments tArgs1 = new TestArguments("true", "Test 1", "portal1", "Grid", "Firefox");
-    tArgs1.addTestArgument("url", "java.lang.String", "http://google.com");
+    tArgs1.setTestArgument("url", "java.lang.String", "http://google.com");
     TestRow tCase1 = new TestRow(tArgs1);
     mySuite.add(tCase1);
 
     TestArguments tArgs2 = new TestArguments("true", "Test 2", "portal2", "Local", "Chrome");
-    tArgs2.addTestArgument("url", "java.lang.String", "http://yelp.com");
+    tArgs2.setTestArgument("url", "java.lang.String", "http://yelp.com");
     TestRow tCase2 = new TestRow(tArgs2);
     mySuite.add(tCase2);
 

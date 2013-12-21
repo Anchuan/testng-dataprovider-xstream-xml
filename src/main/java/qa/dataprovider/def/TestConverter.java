@@ -8,10 +8,10 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 public class TestConverter implements Converter {
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
-	public boolean canConvert(Class type) {
-		return type.isAssignableFrom(TestRow.class);
+	public boolean canConvert( Class type ) {
+		return type.isAssignableFrom( TestRow.class );
 	}
 
 	@Override
@@ -33,8 +33,8 @@ public class TestConverter implements Converter {
 		while ( reader.hasMoreChildren() ) {
 			reader.moveDown();
 			String typeval = reader.getAttribute("type");
-			if ( typeval.isEmpty() ) {
-				typeval = "null";
+			if ( typeval.isEmpty() || typeval == "null" ) {
+				typeval = "java.lang.String";
 			}
 			testargs.setArgument( new ArgObject( reader.getNodeName(), typeval, reader.getValue() ) );
 			reader.moveUp();
