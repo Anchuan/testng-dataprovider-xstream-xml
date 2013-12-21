@@ -3,48 +3,20 @@
   <sauceURL>http://username-string:access-key-string@ondemand.saucelabs.com:80/wd/hub</sauceURL>
   <tests>
     <test>
-      <args>
-        <arg>
-          <enabled type="java.lang.Boolean">true</enabled>
-        </arg>
-        <arg>
-          <testname type="java.lang.String">Test 1</testname>
-        </arg>
-        <arg>
-          <environment type="java.lang.String">portal1</environment>
-        </arg>
-        <arg>
-          <testlocale type="java.lang.String">Grid</testlocale>
-        </arg>
-        <arg>
-          <browser type="java.lang.String">Firefox</browser>
-        </arg>
-        <arg>
-          <url type="java.lang.String">http://google.com</url>
-        </arg>
-      </args>
+      <enabled type="java.lang.Boolean">true</enabled>
+      <testname type="java.lang.String">Test 1</testname>
+      <environment type="java.lang.String">portal1</environment>
+      <testlocale type="java.lang.String">Grid</testlocale>
+      <browser type="java.lang.String">Firefox</browser>
+      <url type="java.lang.String">http://google.com</url>
     </test>
     <test>
-      <args>
-        <arg>
-          <enabled type="java.lang.Boolean">true</enabled>
-        </arg>
-        <arg>
-          <testname type="java.lang.String">Test 2</testname>
-        </arg>
-        <arg>
-          <environment type="java.lang.String">portal2</environment>
-        </arg>
-        <arg>
-          <testlocale type="java.lang.String">Local</testlocale>
-        </arg>
-        <arg>
-          <browser type="java.lang.String">Chrome</browser>
-        </arg>
-        <arg>
-          <url type="java.lang.String">http://yelp.com</url>
-        </arg>
-      </args>
+      <enabled type="java.lang.Boolean">true</enabled>
+      <testname type="java.lang.String">Test 2</testname>
+      <environment type="java.lang.String">portal2</environment>
+      <testlocale type="java.lang.String">Local</testlocale>
+      <browser type="java.lang.String">Chrome</browser>
+      <url type="java.lang.String">http://yelp.com</url>
     </test>
   </tests>
 </suite>
