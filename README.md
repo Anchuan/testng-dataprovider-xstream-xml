@@ -6,6 +6,7 @@ A conceptual TestNG DataProvider using XStream to serialize XML.
 RUN
 ===================
 Run with the Maven goal:  surefire:test 
+Output is stored in ${basedir}/data
 
 DESIGN
 ===================

@@ -3,35 +3,32 @@ package qa.dataprovider;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import qa.dataprovider.def.SuiteData;
 import qa.dataprovider.def.TestArguments;
 import qa.dataprovider.def.TestRow;
-
 import com.thoughtworks.xstream.XStream;
 
 public class XMLDataHelper {
-
+  
   private SuiteData testSuite;
   
   public XMLDataHelper() {
 	  System.out.println("XMLDataHelper object ready for you to call the createSuiteFile method...");
   }
 
-  public XMLDataHelper(String fileName) {
-    File testXML = new File(fileName);
-    if (!testXML.exists()) {
-      System.out.println("Generating new default test data in xml file '" + fileName + "'.");
+  public XMLDataHelper( File testXML ) {
+    if ( !testXML.exists() ) {
+      System.out.println("Generating new default test data in xml file '" + testXML.getAbsolutePath() + "'.");
       try {
         testXML.createNewFile();
-        createDefaultSuiteFile(testXML);
+        createDefaultSuiteFile( testXML );
       }
-      catch (IOException e) {
+      catch ( IOException e ) {
         e.printStackTrace();
       }
     }
     else {
-      System.out.println("Loading test data from xml file '" + fileName + "'.");
+      System.out.println("Loading test data from xml file '" + testXML.getAbsolutePath() + "'.");
       XStream xStream = new XStream();
       xStream.alias("suite", SuiteData.class);
       xStream.autodetectAnnotations(true);

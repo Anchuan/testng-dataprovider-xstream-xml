@@ -1,5 +1,6 @@
 package qa.dataprovider;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -13,21 +14,24 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-// From http://stackoverflow.com/questions/19811581/how-to-convert-xml-to-html-using-xslt-in-java
 public class XMLTransformer {
+	
+	private static final File directory = new File("data"); // subdir where transformations occur
+	
+	public XMLTransformer() {
+		// does nothing
+	}
 
-	public static void main( String args[] ) {
+	public static void generateHtmlFromInputXML( String testFile, String styleSheetFile, String outHtmlFile ) {
 		try {
 			TransformerFactory tFactory = TransformerFactory.newInstance();
-
-			Source xslDoc = new StreamSource("src/test/resources/tutorial.xsl");
-			Source xmlDoc = new StreamSource("data-provider.xml");
-
-			String outputFileName = "Suite.html";
-
-			OutputStream htmlFile = new FileOutputStream(outputFileName);
-			Transformer trasform = tFactory.newTransformer(xslDoc);
-			trasform.transform(xmlDoc, new StreamResult(htmlFile));
+			Source xslDoc = new StreamSource( new File ( styleSheetFile ) );
+			Source xmlDoc = new StreamSource( new File( directory + File.separator + testFile ) );
+			File outFile = new File( directory + File.separator + outHtmlFile );
+			if ( outFile.exists() ) outFile.delete(); // delete before regenerating
+			OutputStream htmlFile = new FileOutputStream( outFile );
+			Transformer tranzform = tFactory.newTransformer( xslDoc );
+			tranzform.transform( xmlDoc, new StreamResult( htmlFile ) );
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (TransformerConfigurationException e) {

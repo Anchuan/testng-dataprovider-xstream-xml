@@ -1,38 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="146" started-at="2013-12-21T05:23:58Z" finished-at="2013-12-21T05:23:58Z">
+  <suite name="Suite" duration-ms="255" started-at="2013-12-22T00:48:24Z" finished-at="2013-12-22T00:48:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="146" started-at="2013-12-21T05:23:58Z" finished-at="2013-12-21T05:23:58Z">
+    <test name="Default test" duration-ms="255" started-at="2013-12-22T00:48:24Z" finished-at="2013-12-22T00:48:24Z">
       <class name="qa.dataprovider.ParametersTest">
-        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@1d6e5ecb]" name="printHorizontal" duration-ms="9" started-at="2013-12-20T21:23:58Z" data-provider="testdata" finished-at="2013-12-20T21:23:58Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:qa.dataprovider.ParametersTest@18d1cf9e]" name="setup" is-config="true" duration-ms="5" started-at="2013-12-21T16:48:24Z" finished-at="2013-12-21T16:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="createDataTest()[pri:0, instance:qa.dataprovider.ParametersTest@18d1cf9e]" name="createDataTest" duration-ms="123" started-at="2013-12-21T16:48:24Z" finished-at="2013-12-21T16:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDataTest -->
+        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@18d1cf9e]" name="printHorizontal" duration-ms="2" started-at="2013-12-21T16:48:24Z" data-provider="testdata1" finished-at="2013-12-21T16:48:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 3}, {environment, java.lang.String, portal3}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://microsoft.com}, {earth, java.lang.String, e}, {air, java.lang.String, a}, {fire, java.lang.String, f}, {water, java.lang.String, w}]]]>
+                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 1}, {environment, java.lang.String, portal1}, {testlocale, java.lang.String, Grid}, {browser, java.lang.String, Firefox}, {url, java.lang.String, http://google.com}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printHorizontal -->
-        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@1d6e5ecb]" name="printVertical" duration-ms="0" started-at="2013-12-20T21:23:58Z" data-provider="testdata" finished-at="2013-12-20T21:23:58Z">
+        <test-method status="PASS" signature="printHorizontal(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@18d1cf9e]" name="printHorizontal" duration-ms="1" started-at="2013-12-21T16:48:24Z" data-provider="testdata1" finished-at="2013-12-21T16:48:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 3}, {environment, java.lang.String, portal3}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://microsoft.com}, {earth, java.lang.String, e}, {air, java.lang.String, a}, {fire, java.lang.String, f}, {water, java.lang.String, w}]]]>
+                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 2}, {environment, java.lang.String, portal2}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://yelp.com}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printHorizontal -->
+        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@18d1cf9e]" name="printVertical" duration-ms="0" started-at="2013-12-21T16:48:24Z" data-provider="testdata2" finished-at="2013-12-21T16:48:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 1}, {environment, java.lang.String, portal1}, {testlocale, java.lang.String, Grid}, {browser, java.lang.String, Firefox}, {url, java.lang.String, http://google.com}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printVertical -->
-        <test-method status="PASS" signature="testSuiteFile()[pri:0, instance:qa.dataprovider.ParametersTest@1d6e5ecb]" name="testSuiteFile" duration-ms="14" started-at="2013-12-20T21:23:58Z" finished-at="2013-12-20T21:23:58Z">
+        <test-method status="PASS" signature="printVertical(qa.dataprovider.def.TestArguments)[pri:0, instance:qa.dataprovider.ParametersTest@18d1cf9e]" name="printVertical" duration-ms="0" started-at="2013-12-21T16:48:24Z" data-provider="testdata2" finished-at="2013-12-21T16:48:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{enabled, java.lang.Boolean, true}, {testname, java.lang.String, Test 2}, {environment, java.lang.String, portal2}, {testlocale, java.lang.String, Local}, {browser, java.lang.String, Chrome}, {url, java.lang.String, http://yelp.com}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSuiteFile -->
+        </test-method> <!-- printVertical -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:qa.dataprovider.ParametersTest@18d1cf9e]" name="teardown" is-config="true" duration-ms="107" started-at="2013-12-21T16:48:24Z" finished-at="2013-12-21T16:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- qa.dataprovider.ParametersTest -->
     </test> <!-- Default test -->
   </suite> <!-- Suite -->
