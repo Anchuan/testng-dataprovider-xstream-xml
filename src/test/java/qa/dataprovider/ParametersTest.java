@@ -69,11 +69,16 @@ public class ParametersTest {
 	    tArgs4.setTestArgument("water", "java.lang.String", "Water");
 	    TestRow tCase4 = new TestRow( tArgs4 );
 	    
-	    TestRow[] trs = new TestRow[2];
-	    trs[0] = tCase3;
-	    trs[1] = tCase4;
+	    TestArguments tArgs5 = new TestArguments("true", "Test 5", "portal5", "Grid", "Firefox");
+	    tArgs5.setTestArgument("url", "java.lang.String", "http://etsy.com");
+	    tArgs5.setTestArgument("earth", "java.lang.String", "Earth");
+	    tArgs5.setTestArgument("air", "java.lang.String", "Air");
+	    tArgs5.setTestArgument("fire", "java.lang.String", "Fire5");
+	    tArgs5.setTestArgument("water", "java.lang.String", "Water");
+	    TestRow tCase5 = new TestRow( tArgs5 );
+	    
 	    File out = new File("data/elements.xml");
-		helper.createSuiteFile( out, "Suite 2", "http://google.com", tCase3, tCase4 );
+		helper.createSuiteFile( out, "Suite 2", "http://google.com", tCase3, tCase4, tCase5 );
 		
 		helper = new XMLDataHelper( out );
 		

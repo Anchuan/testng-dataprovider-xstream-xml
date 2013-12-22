@@ -26,5 +26,17 @@
       <fire type="java.lang.String">Fire</fire>
       <water type="java.lang.String">Water</water>
     </test>
+    <test>
+      <enabled type="java.lang.Boolean">true</enabled>
+      <testname type="java.lang.String">Test 5</testname>
+      <environment type="java.lang.String">portal5</environment>
+      <testlocale type="java.lang.String">Grid</testlocale>
+      <browser type="java.lang.String">Firefox</browser>
+      <url type="java.lang.String">http://etsy.com</url>
+      <earth type="java.lang.String">Earth</earth>
+      <air type="java.lang.String">Air</air>
+      <fire type="java.lang.String">Fire5</fire>
+      <water type="java.lang.String">Water</water>
+    </test>
   </tests>
 </suite>
