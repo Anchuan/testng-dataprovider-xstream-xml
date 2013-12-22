@@ -55,4 +55,17 @@ public class ArgObject {
 		this.val = val;
 	}
 	
+	public boolean isInteger() {
+		boolean is = false;
+		try {
+			if ( type.equalsIgnoreCase("java.lang.Integer") ) {
+				Integer.parseInt( this.val );
+				is = true;
+			}
+		} catch ( NumberFormatException e ) {
+			is = false;
+		}
+		return is;
+	}
+	
 }
