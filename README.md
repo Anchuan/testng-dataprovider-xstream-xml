@@ -15,5 +15,5 @@ Output is stored in **${basedir}/data**
 >with their own data type) to each test row.
 
 ###TODO LIST
-1.  
+1.  Rewrite this using Jackson DataBind instead of XStream
 
