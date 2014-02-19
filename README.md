@@ -2,6 +2,10 @@
 
 A conceptual TestNG DataProvider using XStream to serialize XML.
 
+I probably would not use this method.  Instead , use this method:
+https://github.com/djangofan/MetaModelExample
+
+
 ###RUN
 Run with the Maven goal:  **surefire:test**
 
